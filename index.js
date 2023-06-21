@@ -40,9 +40,12 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+function kopyala(dizi){
+  const newDizi = [...dizi];
+  return newDizi;
 }
+
+
 
 
 /* Görev 2:
@@ -56,8 +59,10 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
+function dizi25Cesitmi(dizi2){
+  if(dizi2.length == 25){
+    return true;
+  }
 }
 
 
@@ -74,8 +79,9 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+function cesitEkle(dizi3, str){
+  dizi3.unshift(str);
+  return dizi3;
 }
 
 
@@ -92,8 +98,9 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
-  /*kod buraya*/
+function sonCesitiKaldir(dizi4){
+  dizi4.pop();
+  return dizi4;
 }
 
 
@@ -108,8 +115,8 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
+function indekstekiCesitiGetir(dizi5, num){
+  return dizi5[num];
 }
 
 
@@ -128,8 +135,14 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreCesitCikar(dizi6, lezzet){
+  const diziWoLezzet = [];
+  for (let i=0; i< dizi6.length; i++){
+    if(dizi6[i] !== lezzet ){
+      diziWoLezzet.push(dizi6[i]);
+    }
+  }
+  return diziWoLezzet;
 }
 
 
@@ -154,8 +167,14 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreFiltrele(dizi7, filter){
+  const filteredDizi = [];
+  for(let i=0; i< dizi7.length; i++){
+    if(dizi7[i].includes(filter)){
+      filteredDizi.push(dizi7[i]);
+    }
+  }
+  return filteredDizi;
 }
 
 
