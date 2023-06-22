@@ -192,7 +192,7 @@ Aşağıdakileri yapmak için ortalamaKelimeSayisi işlevini kullanın:
 */
 
 
-
+/*
 function ortalamaKelimeSayisi(dizi10){
   const newDizi10 = [];
   let count = 0;
@@ -222,13 +222,22 @@ function ortalamaKelimeSayisi(dizi10){
   }
   return count / dizi10.length
 }
-
-function ortalamaKelimeSayisi3(arr) {
+*/
+function ortalamaKelimeSayisi(arr) {
   let counter = 0;
   for (let i = 0; i < arr.length; i++) {
     counter += arr[i].length;
   }
   return arr.length / counter;
+}
+
+function rastgeleTatlar(dizi100,dizi101,dizi102,dizi103){
+  const newDizi100 = dizi100.concat(dizi101,dizi102,dizi103);
+  function getMultipleRandom(arr5, num5) {
+    const shuffled = [...arr5].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num5);
+  }
+  return getMultipleRandom(newDizi100, 25);
 }
 
 /* ALIŞTIRMA 2:
@@ -242,7 +251,7 @@ Aşağıdakileri yapmak için rastgeleTatlar işlevini ve yeni dizileri kullanı
 
   Örneğin: rastgeleTatlar(orijinalTatlar, yeniTatlar, mevsimlikTatlar, bolgeselTatlar) çalıştırıldığında ["Kestane", "Ballı Badem,"..."Hindistan Cevizi", "Kuru üzüm"].
 */
-
+/*
 function rastgeleTatlar(dizi100,dizi101,dizi102,dizi103){
   const newDizi100 = dizi100.concat(dizi101,dizi102,dizi103);
   function getMultipleRandom(arr5, num5) {
@@ -254,6 +263,7 @@ function rastgeleTatlar(dizi100,dizi101,dizi102,dizi103){
 
 function rastgeleTatlar2(arr1, arr2, arr3, arr4) {
   /*kod buraya*/
+  /*
   let arr = [...arr1, ...arr2, ...arr3, ...arr4];
   let newArr = [];
 
@@ -267,8 +277,8 @@ function rastgeleTatlar2(arr1, arr2, arr3, arr4) {
   }
   console.log(newArr);
 }
-
-
+/*
+/*
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
  const yeniTatlar = [
    "Badem",
@@ -307,7 +317,7 @@ function rastgeleTatlar2(arr1, arr2, arr3, arr4) {
  "Karamel"
  ]
 
-
+ */
 /* Lütfen bu satırın altındaki hiçbir şeyi değiştirmeyin */
 function sa(){
   console.log('Calışıyor');
